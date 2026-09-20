@@ -1,99 +1,17 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./styles.css";
 
-const CATEGORY_META = {
-  music: { label: "Music", icon: "♫" },
-  movies: { label: "Movies", icon: "◉" },
-  places: { label: "Places", icon: "⌖" },
-  purchases: { label: "Purchases", icon: "₹" },
-  photos: { label: "Photos", icon: "▧" },
-  messages: { label: "Messages", icon: "✦" },
-  searches: { label: "Searches", icon: "⌕" },
-  events: { label: "Events", icon: "✧" },
-  notes: { label: "Notes", icon: "✎" },
-};
-
-const FILTERS = [
-  "all",
-  "music",
-  "movies",
-  "places",
-  "purchases",
-  "photos",
-  "messages",
-  "searches",
-  "events",
-  "notes",
-];
-
-function number(value) {
-  const n = Number(value);
-  return Number.isFinite(n) ? n : 0;
-}
-
-function formatNumber(value) {
-  return number(value).toLocaleString("en-IN");
-}
-
-function getCategory(item) {
-  const raw = String(
-    item?.category ||
-      item?.type ||
-      item?.kind ||
-      item?.source ||
-      "music"
-  ).toLowerCase();
-
-  if (raw.includes("music") || raw.includes("spotify")) return "music";
-  if (raw.includes("movie") || raw.includes("film")) return "movies";
-  if (raw.includes("place") || raw.includes("location")) return "places";
-  if (raw.includes("purchase") || raw.includes("transaction")) return "purchases";
-  if (raw.includes("photo") || raw.includes("image")) return "photos";
-  if (raw.includes("message") || raw.includes("chat")) return "messages";
-  if (raw.includes("search")) return "searches";
-  if (raw.includes("event")) return "events";
-  if (raw.includes("note")) return "notes";
-
-  return "music";
-}
-
-function getDate(item) {
-  return (
-    item?.date ||
-    item?.timestamp ||
-    item?.datetime ||
-    item?.time ||
-    ""
-  );
-}
-
-function getTitle(item) {
-  return (
-    item?.title ||
-    item?.track ||
-    item?.name ||
-    item?.description ||
-    item?.item ||
-    item?.artist ||
-    "Untitled receipt"
-  );
-}
-
-function getSecondary(item) {
-  return (
-    item?.artist ||
-    item?.album ||
-    item?.location ||
-    item?.place ||
-    item?.merchant ||
-    item?.category ||
-    ""
-  );
-}
-
-function getSearchText(item) {
-  return JSON.stringify(item).toLowerCase();
-}
+import {
+  CATEGORY_META,
+  FILTERS,
+  number,
+  formatNumber,
+  getCategory,
+  getDate,
+  getTitle,
+  getSecondary,
+  getSearchText,
+} from "./utils/archive";
 
 function App() {
   const [data, setData] = useState(null);
@@ -112,6 +30,7 @@ function App() {
         if (!response.ok) {
           throw new Error(`Archive request failed: ${response.status}`);
         }
+
         return response.json();
       })
       .then((result) => {
@@ -120,10 +39,14 @@ function App() {
         setData(result);
 
         const firstYear = result?.musicByYear?.[0]?.year;
-        if (firstYear) setSelectedYear(firstYear);
+        if (firstYear) {
+          setSelectedYear(firstYear);
+        }
 
         const firstDate = result?.demoDates?.[0];
-        if (firstDate) setSelectedDate(firstDate);
+        if (firstDate) {
+          setSelectedDate(firstDate);
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -214,9 +137,14 @@ function App() {
     return (
       <main className="error-page">
         <div className="error-card">
-          <span className="mini-label">LIFE RECEIPT / ERROR</span>
+          <span className="mini-label">
+            LIFE RECEIPT / ERROR
+          </span>
+
           <h1>Archive unavailable.</h1>
+
           <p>{error}</p>
+
           <button
             className="button button-light"
             onClick={() => window.location.reload()}
@@ -232,6 +160,7 @@ function App() {
     return (
       <main className="loading-screen">
         <div className="loading-mark">LR</div>
+
         <div className="loading-copy">
           <span>INITIALIZING ARCHIVE</span>
           <i />
@@ -246,6 +175,7 @@ function App() {
       <header className="topbar">
         <a href="#top" className="brand">
           <span className="brand-mark">LR</span>
+
           <span>
             LIFE
             <b>RECEIPT</b>
@@ -340,7 +270,10 @@ function App() {
 
                   <div className="receipt-grid">
                     <div>
-                      <strong>{formatNumber(musicRecords)}</strong>
+                      <strong>
+                        {formatNumber(musicRecords)}
+                      </strong>
+
                       <span>MUSIC</span>
                     </div>
 
@@ -348,6 +281,7 @@ function App() {
                       <strong>
                         {formatNumber(transactionRecords)}
                       </strong>
+
                       <span>TRANSACTIONS</span>
                     </div>
                   </div>
@@ -379,20 +313,27 @@ function App() {
 
             <div className="hero-bottom">
               <span>SCROLL TO DISCOVER</span>
+
               <div className="scroll-line">
                 <i />
               </div>
+
               <span>01 / 05</span>
             </div>
           </div>
         </section>
 
         {/* PULSE */}
-        <section className="section pulse-section" id="pulse">
+        <section
+          className="section pulse-section"
+          id="pulse"
+        >
           <div className="section-intro">
             <div>
               <span className="section-number">01</span>
-              <span className="section-label">LIFE PULSE</span>
+              <span className="section-label">
+                LIFE PULSE
+              </span>
             </div>
 
             <h2>
@@ -412,6 +353,7 @@ function App() {
             <div className="pulse-meta">
               <div>
                 <span>LISTENING ACTIVITY</span>
+
                 <strong>
                   {selectedYearData?.year || "—"}
                 </strong>
@@ -419,11 +361,13 @@ function App() {
 
               <div className="pulse-selected">
                 <span>SELECTED YEAR</span>
+
                 <b>
                   {formatNumber(
                     selectedYearData?.count || 0
                   )}
                 </b>
+
                 <small>records</small>
               </div>
             </div>
@@ -431,6 +375,7 @@ function App() {
             <div className="pulse-chart">
               {musicByYear.map((item) => {
                 const count = number(item.count);
+
                 const height = Math.max(
                   5,
                   (count / maxYearCount) * 100
@@ -476,10 +421,13 @@ function App() {
 
             <div className="pulse-footer">
               <span>2013</span>
+
               <div />
+
               <span>
-                {musicByYear[musicByYear.length - 1]?.year ||
-                  "2024"}
+                {musicByYear[
+                  musicByYear.length - 1
+                ]?.year || "2024"}
               </span>
             </div>
           </div>
@@ -493,6 +441,7 @@ function App() {
           <div className="section-intro split">
             <div>
               <span className="section-number">02</span>
+
               <span className="section-label">
                 RECEIPT EXPLORER
               </span>
@@ -544,7 +493,11 @@ function App() {
               </span>
             </div>
 
-            <div className="filter-row">
+            <div
+              className="filter-row"
+              role="group"
+              aria-label="Receipt category filters"
+            >
               {FILTERS.map((item) => {
                 const meta =
                   CATEGORY_META[item] || {
@@ -565,8 +518,12 @@ function App() {
                       setFilter(item);
                       setShowAll(false);
                     }}
+                    aria-pressed={active}
                   >
-                    <span>{meta.icon}</span>
+                    <span aria-hidden="true">
+                      {meta.icon}
+                    </span>
+
                     {item === "all"
                       ? "All receipts"
                       : meta.label}
@@ -579,6 +536,7 @@ function App() {
               <div className="receipt-grid-list">
                 {visibleReceipts.map((item, index) => {
                   const category = getCategory(item);
+
                   const meta =
                     CATEGORY_META[category] ||
                     CATEGORY_META.music;
@@ -617,6 +575,7 @@ function App() {
                         <time>
                           {getDate(item) || "Undated"}
                         </time>
+
                         <span>↗</span>
                       </div>
                     </article>
@@ -626,7 +585,9 @@ function App() {
             ) : (
               <div className="empty-state">
                 <span>⌕</span>
+
                 <h3>No receipts found.</h3>
+
                 <p>
                   Try another search or category.
                 </p>
@@ -637,13 +598,16 @@ function App() {
               <button
                 className="load-more"
                 type="button"
-                onClick={() => setShowAll((value) => !value)}
+                onClick={() =>
+                  setShowAll((value) => !value)
+                }
               >
                 {showAll
                   ? "Show fewer receipts"
                   : `View all ${formatNumber(
                       filteredReceipts.length
                     )} receipts`}
+
                 <span>↓</span>
               </button>
             )}
@@ -658,6 +622,7 @@ function App() {
           <div className="connection-heading">
             <div>
               <span className="section-number">03</span>
+
               <span className="section-label">
                 CONNECT THE DOTS
               </span>
@@ -694,6 +659,9 @@ function App() {
                   onClick={() =>
                     setSelectedDate(date)
                   }
+                  aria-pressed={
+                    selectedConnection === date
+                  }
                 >
                   <span>
                     {String(index + 1).padStart(2, "0")}
@@ -709,8 +677,10 @@ function App() {
             <div className="connection-canvas">
               <div className="connection-date">
                 <span>CONTEXTUAL SNAPSHOT</span>
+
                 <strong>
-                  {selectedConnection || "Select a date"}
+                  {selectedConnection ||
+                    "Select a date"}
                 </strong>
               </div>
 
@@ -719,6 +689,7 @@ function App() {
 
               <div className="connection-center">
                 <span>THE DAY</span>
+
                 <strong>
                   {selectedConnection
                     ? String(selectedConnection).slice(
@@ -765,13 +736,16 @@ function App() {
           <div className="connection-proof">
             <div>
               <span>MUSIC × HOUSEHOLD</span>
+
               <strong>
                 {formatNumber(
-                  sharedDates?.musicHousehold?.length ||
+                  sharedDates?.musicHousehold
+                    ?.length ||
                     sharedDates?.musicHousehold ||
                     0
                 )}
               </strong>
+
               <small>
                 shared calendar dates
               </small>
@@ -779,6 +753,7 @@ function App() {
 
             <div>
               <span>MUSIC × TRANSACTIONS</span>
+
               <strong>
                 {formatNumber(
                   sharedDates?.musicTransactions
@@ -787,15 +762,17 @@ function App() {
                     0
                 )}
               </strong>
+
               <small>
                 contextual overlaps
               </small>
             </div>
 
             <p>
-              Connections shown here are temporal/contextual
-              relationships — not claims about a single
-              person's identity.
+              Connections shown here are
+              temporal/contextual relationships —
+              not claims about a single person's
+              identity.
             </p>
           </div>
         </section>
@@ -808,6 +785,7 @@ function App() {
           <div className="section-intro split">
             <div>
               <span className="section-number">04</span>
+
               <span className="section-label">
                 PATTERN LAB
               </span>
@@ -820,9 +798,9 @@ function App() {
             </div>
 
             <p>
-              Aggregate signals turn thousands of individual
-              records into patterns that are easier to
-              explore.
+              Aggregate signals turn thousands of
+              individual records into patterns that
+              are easier to explore.
             </p>
           </div>
 
@@ -836,6 +814,7 @@ function App() {
                 <div className="pattern-ring ring-one" />
                 <div className="pattern-ring ring-two" />
                 <div className="pattern-ring ring-three" />
+
                 <span>♫</span>
               </div>
 
@@ -849,54 +828,70 @@ function App() {
                 <p>
                   Listening activity is distributed
                   unevenly across the recorded years,
-                  creating visible peaks and quiet periods.
+                  creating visible peaks and quiet
+                  periods.
                 </p>
               </div>
             </article>
 
             <article className="pattern-card">
               <span>PATTERN / 02</span>
+
               <strong>
                 {formatNumber(musicRecords)}
               </strong>
+
               <h3>Music records</h3>
+
               <p>
                 Listening activity preserved in the
                 prepared archive.
               </p>
+
               <i>♫</i>
             </article>
 
             <article className="pattern-card lime">
               <span>PATTERN / 03</span>
+
               <strong>
                 {formatNumber(transactionRecords)}
               </strong>
+
               <h3>Transaction records</h3>
+
               <p>
                 Purchase activity represented as
                 contextual receipts.
               </p>
+
               <i>₹</i>
             </article>
 
             <article className="pattern-card purple">
               <span>PATTERN / 04</span>
+
               <strong>
                 {formatNumber(demoDates.length)}
               </strong>
+
               <h3>Discovery dates</h3>
+
               <p>
-                Selected moments where different signals
-                can be explored together.
+                Selected moments where different
+                signals can be explored together.
               </p>
+
               <i>✦</i>
             </article>
           </div>
         </section>
 
         {/* CHAPTERS */}
-        <section className="chapters-section" id="chapters">
+        <section
+          className="chapters-section"
+          id="chapters"
+        >
           <div className="chapters-inner">
             <div className="chapter-label">
               <span>05</span>
