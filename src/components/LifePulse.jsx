@@ -1,3 +1,4 @@
+import React from "react";
 export default function LifePulse({ years, selectedYear, setSelectedYear }) {
   const max = Math.max(...years.map((x) => x.count), 1);
   return <section className="section" id="pulse">

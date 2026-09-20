@@ -1,3 +1,4 @@
+import React from "react";
 export default function Chapters() {
   const chapters=[
     ['01','EARLY SIGNALS','2013 — 2015','The first layer of the recorded journey.'],

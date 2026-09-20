@@ -1,3 +1,4 @@
+import React from "react";
 export default function PatternLab({ insights }) {
   const topArtist = insights.topArtists[0];
   const topHousehold = insights.householdCategories[0];
