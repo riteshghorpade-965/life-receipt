@@ -1,0 +1,659 @@
+{
+  "totals": {
+    "music": 149860,
+    "household": 2461,
+    "transactions": 10267
+  },
+  "sharedDates": {
+    "musicHousehold": 351,
+    "musicTransactions": 448
+  },
+  "topArtists": [
+    {
+      "name": "The Beatles",
+      "count": 13621
+    },
+    {
+      "name": "The Killers",
+      "count": 6878
+    },
+    {
+      "name": "John Mayer",
+      "count": 4855
+    },
+    {
+      "name": "Bob Dylan",
+      "count": 3814
+    },
+    {
+      "name": "Paul McCartney",
+      "count": 2697
+    },
+    {
+      "name": "Led Zeppelin",
+      "count": 2482
+    },
+    {
+      "name": "Johnny Cash",
+      "count": 2478
+    },
+    {
+      "name": "The Rolling Stones",
+      "count": 2390
+    }
+  ],
+  "musicByYear": [
+    {
+      "year": 2013,
+      "count": 185
+    },
+    {
+      "year": 2014,
+      "count": 23
+    },
+    {
+      "year": 2015,
+      "count": 2809
+    },
+    {
+      "year": 2016,
+      "count": 6413
+    },
+    {
+      "year": 2017,
+      "count": 26320
+    },
+    {
+      "year": 2018,
+      "count": 14817
+    },
+    {
+      "year": 2019,
+      "count": 14927
+    },
+    {
+      "year": 2020,
+      "count": 24280
+    },
+    {
+      "year": 2021,
+      "count": 22991
+    },
+    {
+      "year": 2022,
+      "count": 16202
+    },
+    {
+      "year": 2023,
+      "count": 11023
+    },
+    {
+      "year": 2024,
+      "count": 9870
+    }
+  ],
+  "householdCategories": [
+    {
+      "name": "Food",
+      "count": 907
+    },
+    {
+      "name": "Transportation",
+      "count": 307
+    },
+    {
+      "name": "Household",
+      "count": 176
+    },
+    {
+      "name": "subscription",
+      "count": 143
+    },
+    {
+      "name": "Other",
+      "count": 126
+    },
+    {
+      "name": "Investment",
+      "count": 103
+    },
+    {
+      "name": "Health",
+      "count": 94
+    },
+    {
+      "name": "Family",
+      "count": 71
+    }
+  ],
+  "transactionCategories": [
+    {
+      "name": "online_shopping",
+      "count": 2596
+    },
+    {
+      "name": "travel",
+      "count": 2419
+    },
+    {
+      "name": "entertainment",
+      "count": 2388
+    },
+    {
+      "name": "fitness_and_medical",
+      "count": 2067
+    },
+    {
+      "name": "Unknown",
+      "count": 797
+    }
+  ],
+  "demoDates": [
+    "2022-09-30",
+    "2017-07-27",
+    "2023-04-07",
+    "2022-05-02",
+    "2017-04-20",
+    "2017-01-15",
+    "2018-01-19",
+    "2023-05-01",
+    "2022-06-05",
+    "2022-11-25",
+    "2023-06-10",
+    "2022-08-14"
+  ],
+  "receipts": [
+    {
+      "date": "2022-09-30",
+      "type": "music",
+      "title": "Jealous Guy - Remastered 2010",
+      "detail": "John Lennon"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "music",
+      "title": "Slide Away - 2014 Remaster",
+      "detail": "Oasis"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "music",
+      "title": "Piano Man",
+      "detail": "Billy Joel"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "music",
+      "title": "The River of Dreams",
+      "detail": "Billy Joel"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "nan"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "nan"
+    },
+    {
+      "date": "2022-09-30",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "nan"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "music",
+      "title": "Cleopatra",
+      "detail": "The Lumineers"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "music",
+      "title": "She Came In Through The Bathroom Window - Remastered 2009",
+      "detail": "The Beatles"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "music",
+      "title": "Photograph",
+      "detail": "Nickelback"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "music",
+      "title": "Patience",
+      "detail": "The Lumineers"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "household",
+      "title": "Food",
+      "detail": "Dinner • 215.0 INR"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "household",
+      "title": "Food",
+      "detail": "Lunch • 203.0 INR"
+    },
+    {
+      "date": "2017-07-27",
+      "type": "household",
+      "title": "Household",
+      "detail": "Appliances • 200.0 INR"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "music",
+      "title": "D'yer Mak'er - Remaster",
+      "detail": "Led Zeppelin"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "music",
+      "title": "My Way",
+      "detail": "Frank Sinatra"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "music",
+      "title": "Finger Back",
+      "detail": "Vampire Weekend"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "music",
+      "title": "Unpack Your Heart",
+      "detail": "Phillip Phillips"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "fraud_Sahni-Dara Pvt Ltd"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "transaction",
+      "title": "travel",
+      "detail": "fraud_Chadha, Chad and Chokshi Pvt Ltd"
+    },
+    {
+      "date": "2023-04-07",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Kibe and Sons Pvt Ltd"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "music",
+      "title": "Mi Mayor Anhelo - Balada",
+      "detail": "Banda MS de Sergio Lizárraga"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "music",
+      "title": "Pyro",
+      "detail": "Kings of Leon"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "music",
+      "title": "Here Comes Your Man - triple j Like a Version",
+      "detail": "Skegss"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "music",
+      "title": "Submarines",
+      "detail": "The Lumineers"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "transaction",
+      "title": "nan",
+      "detail": "fraud_Madan-Ganesan Pvt Ltd"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "nan"
+    },
+    {
+      "date": "2022-05-02",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "nan"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "music",
+      "title": "Born and Raised - Reprise",
+      "detail": "John Mayer"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "music",
+      "title": "Your Body Is a Wonderland",
+      "detail": "John Mayer"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "music",
+      "title": "Si Nos Dejan",
+      "detail": "José Alfredo Jimenez"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "music",
+      "title": "Emoji of a Wave",
+      "detail": "John Mayer"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "household",
+      "title": "Household",
+      "detail": "Kirana • 621.68 INR"
+    },
+    {
+      "date": "2017-04-20",
+      "type": "household",
+      "title": "Food",
+      "detail": "Milk • 64.0 INR"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "music",
+      "title": "Catch & Release - Deepend Remix",
+      "detail": "Matt Simons"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "music",
+      "title": "Catch & Release - Deepend Remix",
+      "detail": "Matt Simons"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "music",
+      "title": "Vivir Mi Vida",
+      "detail": "Marc Anthony"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "music",
+      "title": "Untitled",
+      "detail": "Radiohead"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "household",
+      "title": "Food",
+      "detail": "Grocery • 140.0 INR"
+    },
+    {
+      "date": "2017-01-15",
+      "type": "household",
+      "title": "Food",
+      "detail": "Grocery • 540.0 INR"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "music",
+      "title": "Acquiesce",
+      "detail": "Oasis"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "music",
+      "title": "What Do You Mean?",
+      "detail": "Justin Bieber"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "music",
+      "title": "Glamorous Indie Rock And Roll - Sawdust Version",
+      "detail": "The Killers"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "music",
+      "title": "Bleeding Out",
+      "detail": "Imagine Dragons"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "household",
+      "title": "Food",
+      "detail": "Bread • 17.0 INR"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "household",
+      "title": "Household",
+      "detail": "Kirana • 53.0 INR"
+    },
+    {
+      "date": "2018-01-19",
+      "type": "household",
+      "title": "Food",
+      "detail": "Bread • 20.0 INR"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "music",
+      "title": "Ojalá que llueva café",
+      "detail": "Café Tacvba"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "music",
+      "title": "Flores en Febrero",
+      "detail": "Los Claxons"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "music",
+      "title": "Se Me Olvidó Otra Vez - Unplugged; 2020 Remasterizado",
+      "detail": "Maná"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "music",
+      "title": "Blue World",
+      "detail": "Mac Miller"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "transaction",
+      "title": "online_shopping",
+      "detail": "fraud_Bhandari Group Pvt Ltd"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "nan"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "transaction",
+      "title": "online_shopping",
+      "detail": "fraud_Bhandari Group Pvt Ltd"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "music",
+      "title": "You Sexy Thing",
+      "detail": "Hot Chocolate"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "music",
+      "title": "You Sexy Thing",
+      "detail": "Hot Chocolate"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "music",
+      "title": "Pecan Tree",
+      "detail": "The Mud Howlers"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "music",
+      "title": "Mi Princesa",
+      "detail": "David Bisbal"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Sane Group Pvt Ltd"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Sekhon and Sons Pvt Ltd"
+    },
+    {
+      "date": "2022-06-05",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Sangha, Sachdev and Rajagopalan Pvt Ltd"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "music",
+      "title": "Hopeless Wanderer",
+      "detail": "Mumford & Sons"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "music",
+      "title": "The Way You Look Tonight",
+      "detail": "Tony Bennett"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "music",
+      "title": "As She's Walking Away (feat. Alan Jackson)",
+      "detail": "Zac Brown Band"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "music",
+      "title": "This Is Your Life - Live From The Royal Albert Hall / 2009",
+      "detail": "The Killers"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "transaction",
+      "title": "online_shopping",
+      "detail": "fraud_Apte, Jain and Aurora Pvt Ltd"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "transaction",
+      "title": "travel",
+      "detail": "fraud_Contractor LLC Pvt Ltd"
+    },
+    {
+      "date": "2022-11-25",
+      "type": "transaction",
+      "title": "online_shopping",
+      "detail": "fraud_Apte, Jain and Aurora Pvt Ltd"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "music",
+      "title": "That's What I Want to Hear",
+      "detail": "Phil Ochs"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "music",
+      "title": "Gorilla",
+      "detail": "Bruno Mars"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "music",
+      "title": "So Long, Honey",
+      "detail": "Caamp"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "music",
+      "title": "The Modern Age",
+      "detail": "The Strokes"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "fraud_Bhardwaj, Vaidya and Walia Pvt Ltd"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "fraud_Badami-Chahal Pvt Ltd"
+    },
+    {
+      "date": "2023-06-10",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Choudhry, Shan and Sabharwal Pvt Ltd"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "music",
+      "title": "Choo Choo Train - Mono Single Version",
+      "detail": "The Box Tops"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "music",
+      "title": "Mack the Knife",
+      "detail": "Bobby Darin"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "music",
+      "title": "Me Dediqué a Perderte",
+      "detail": "Alejandro Fernández"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "music",
+      "title": "Samwise the Brave",
+      "detail": "Howard Shore"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "transaction",
+      "title": "travel",
+      "detail": "fraud_Madan-Sood Pvt Ltd"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "transaction",
+      "title": "fitness_and_medical",
+      "detail": "fraud_Ahluwalia Group Pvt Ltd"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "transaction",
+      "title": "entertainment",
+      "detail": "fraud_Raja-Setty Pvt Ltd"
+    }
+  ]
+}
